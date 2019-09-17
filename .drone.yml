@@ -11,9 +11,6 @@ steps:
   commands:
     - go get github.com/cuisongliu/sealbuild
     - sealbuild -f config.ini
-  volumes:
-    - name: docker
-      path: /var/run/docker.sock
 #  when:
 #     event:
 #     - tag
@@ -29,8 +26,3 @@ steps:
   when:
      event:
      - tag
-
-volumes:
-  - name: docker
-    host:
-      path:  /var/run/docker.sock
