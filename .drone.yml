@@ -14,7 +14,7 @@ steps:
   image: plugins/docker:linux-amd64
   commands:
     -  pwd
-    -  $pwd/sealbuild -f config.ini
+    -  /go/src/github.com/fanux/dashboard/sealbuild -f config.ini
 #  when:
 #     event:
 #     - tag
