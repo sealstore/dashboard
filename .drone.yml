@@ -15,7 +15,7 @@ steps:
   image: plugins/docker
   commands:
     -  ls -l
-    -  ./sealbuild -f config.ini
+    -  $pwd/sealbuild -f config.ini
 #  when:
 #     event:
 #     - tag
