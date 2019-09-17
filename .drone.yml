@@ -12,7 +12,7 @@ steps:
 - name: build
   image: plugins/docker
   commands:
-    -  sealbuild -f config.ini
+    -  $GOPATH/bin/sealbuild -f config.ini
 #  when:
 #     event:
 #     - tag
