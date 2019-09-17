@@ -9,10 +9,11 @@ steps:
   image: golang:1.11.3
   commands:
     - go get github.com/cuisongliu/sealbuild
+    - cp $GOPATH/bin/sealbuild .
 - name: build
   image: plugins/docker
   commands:
-    -  $GOPATH/bin/sealbuild -f config.ini
+    -  ./sealbuild -f config.ini
 #  when:
 #     event:
 #     - tag
