@@ -11,6 +11,7 @@ steps:
   commands:
     - go get github.com/cuisongliu/sealbuild
     - sealbuild -f config.ini
+    - env
 #  when:
 #     event:
 #     - tag
