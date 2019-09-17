@@ -10,9 +10,8 @@ steps:
   commands:
     - go get github.com/cuisongliu/sealbuild
     - cp $GOPATH/bin/sealbuild .
-    - ls -l
 - name: build
-  image: plugins/docker
+  image: plugins/docker:linux-amd64
   commands:
     -  ls -l
     -  $pwd/sealbuild -f config.ini
