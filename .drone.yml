@@ -11,9 +11,9 @@ steps:
     - go get github.com/cuisongliu/sealbuild
     - sealbuild -f config.ini
 
-  when:
-     event:
-     - tag
+#  when:
+#     event:
+#     - tag
 
 - name: publish
   image: plugins/github-release
