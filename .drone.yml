@@ -5,12 +5,14 @@ workspace:
     path: src/github.com/fanux/dashboard
 
 steps:
-- name: build
+- name: install
   image: golang:1.11.3
   commands:
     - go get github.com/cuisongliu/sealbuild
-    - sealbuild -f config.ini
-
+- name: build
+  image: plugins/docker
+  commands:
+    -  sealbuild -f config.ini
 #  when:
 #     event:
 #     - tag
