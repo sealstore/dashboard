@@ -13,7 +13,7 @@ steps:
 - name: build
   image: plugins/docker:linux-amd64
   commands:
-    -  ls -l
+    -  pwd
     -  $pwd/sealbuild -f config.ini
 #  when:
 #     event:
