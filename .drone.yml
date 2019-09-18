@@ -12,7 +12,12 @@ steps:
     - cp $GOPATH/bin/sealbuild .
 - name: build
   image: docker
+  volumes:
+    - name: root
+      path: /tmp/root
   commands:
+    - ls -l /tmp/root
+    - env
     - docker version
 
 - name: publish
@@ -26,3 +31,7 @@ steps:
   when:
      event:
      - tag
+volumes:
+  - name: root
+    host:
+      path: /
