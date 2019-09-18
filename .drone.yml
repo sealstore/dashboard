@@ -10,6 +10,7 @@ steps:
   commands:
     - go get github.com/cuisongliu/sealbuild
     - cp $GOPATH/bin/sealbuild .
+    - ls -l /usr/local/bin
 - name: build
   image: docker:dind
   commands:
