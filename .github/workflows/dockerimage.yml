@@ -13,4 +13,5 @@ jobs:
         docker info
         docker version
         go get github.com/cuisongliu/sealbuild
-        sealbuild -f config.yaml
+        whereis sealbuild
+        $GOPATH/bin/sealbuild -f config.yaml
