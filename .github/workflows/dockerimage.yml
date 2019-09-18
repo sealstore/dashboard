@@ -12,6 +12,8 @@ jobs:
         env
         docker info
         docker version
-        go get github.com/cuisongliu/sealbuild
-        whereis sealbuild
-        $GOPATH/bin/sealbuild -f config.yaml
+        git clone https://github.com/cuisongliu/sealbuild.git
+        cd sealbuild
+        export GO111MODULE=on && export GOPROXY=https://goproxy.io && cd src/ && export GOOS=linux && export GOARCH=amd64 && go build -o ../sealbuild -v && chmod a+x ../sealbuild
+        ./sealbuild -f config.ini
+
