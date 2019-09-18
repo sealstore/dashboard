@@ -12,10 +12,8 @@ steps:
     - cp $GOPATH/bin/sealbuild .
     - ls -l /usr/local/bin
 - name: build
-  image: docker:dind
+  image: plugins/docker
   commands:
-    - ls -l /usr/local/bin
-    - sudo /usr/local/bin/dockerd -H unix:///var/run/docker.sock
     - docker version
     - docker info
 
