@@ -11,12 +11,8 @@ steps:
     - go get github.com/cuisongliu/sealbuild
     - cp $GOPATH/bin/sealbuild .
 - name: build
-  image: docker
-  volumes:
-    - name: root
-      path: /tmp/root
+  image: docker:dind
   commands:
-    - ls -l /tmp/root
     - env
     - docker version
 
@@ -31,7 +27,3 @@ steps:
   when:
      event:
      - tag
-volumes:
-  - name: root
-    host:
-      path: /
