@@ -10,11 +10,12 @@ steps:
   image: golang:1.11.3
   commands:
     - go get github.com/cuisongliu/sealbuild
+    - cp $GOPATH/bin/sealbuild .
+- name: build
+  image: docker:dind
+  commands:
+    - docker version
     - sealbuild -f config.ini
-    - env
-#  when:
-#     event:
-#     - tag
 
 - name: publish
   image: plugins/github-release
