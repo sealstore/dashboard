@@ -14,7 +14,7 @@ steps:
 - name: build
   image: docker
   commands:
-    - dockerd &
+    - dockerd
     - docker version
     - docker info
 
