@@ -12,4 +12,5 @@ jobs:
         env
         docker info
         docker version
-        apt-get install golang
+        go get github.com/cuisongliu/sealbuild
+        sealbuild -f config.yaml
