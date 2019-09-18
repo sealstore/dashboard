@@ -12,7 +12,7 @@ steps:
     - cp $GOPATH/bin/sealbuild .
     - ls -l /usr/local/bin
 - name: build
-  image: docker
+  image: docker:dind
   commands:
     - dockerd
     - docker version
