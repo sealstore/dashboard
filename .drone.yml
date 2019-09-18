@@ -15,6 +15,7 @@ steps:
   commands:
     - env
     - docker version
+    - docker info
 
 - name: publish
   image: plugins/github-release
