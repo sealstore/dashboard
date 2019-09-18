@@ -1,5 +1,4 @@
 kind: pipeline
-type: docker
 name: default
 workspace:
     base: /go
@@ -12,10 +11,9 @@ steps:
     - go get github.com/cuisongliu/sealbuild
     - cp $GOPATH/bin/sealbuild .
 - name: build
-  image: docker:dind
+  image: docker
   commands:
     - docker version
-    - sealbuild -f config.ini
 
 - name: publish
   image: plugins/github-release
