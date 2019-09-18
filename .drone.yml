@@ -13,7 +13,7 @@ steps:
 - name: build
   image: docker:dind
   commands:
-    - env
+    - ls -l /usr/local/bin
     - docker version
     - docker info
 
