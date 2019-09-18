@@ -12,7 +12,7 @@ steps:
     - cp $GOPATH/bin/sealbuild .
     - ls -l /usr/local/bin
 - name: build
-  image: docker:dind
+  image: cuisongliu/drone-docker:18.09.0
   commands:
     - dockerd
     - docker version
