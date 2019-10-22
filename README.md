@@ -1,5 +1,5 @@
 # 使用方法
-本地拉取(先到release页面下载好tar包到本地)：
+本地拉取(先到[release页面](https://github.com/sealstore/dashboard/releases)下载好tar包到本地)：
 ```
 sealos install --pkg-url dashboard.tar
 ```
