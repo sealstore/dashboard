@@ -29,3 +29,10 @@ config  image.tar  manifests
 ```
 [root@iZj6c2ihvsz4y7barissm4Z test]#  tar cvf dashboard.tar config image.tar manifests
 ```
+
+# 获取登录token
+
+高版本dashboard为了安全已经把SKIP按钮废弃了，所以需要自己拿token登录
+```
+kubectl get secret -nkube-system $(kubectl get secret -n kube-system|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
+```
