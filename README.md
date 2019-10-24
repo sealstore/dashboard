@@ -1,11 +1,14 @@
 # 使用方法
+注意，请使用sealos最新版本
+
 本地拉取(先到[release页面](https://github.com/sealstore/dashboard/releases)下载好tar包到本地)：
 ```
+wget https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata.5/dashboard.tar
 sealos install --pkg-url dashboard.tar
 ```
-远程拉取：
+或者远程拉取：
 ```
-sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v1.10.0/dashboardv1.10.0.tar 
+sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata.5/dashboard.tar
 ```
 # 访问
 https://你的master地址:32000
