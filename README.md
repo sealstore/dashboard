@@ -12,6 +12,18 @@ https://你的master地址:32000
 
 如chrome访问有问题就用火狐，或者自签[dashboard证书](https://sealyun.com/faq)
 
+# 获取登录token
+
+高版本dashboard为了安全已经把SKIP按钮废弃了，所以需要自己拿token登录
+```
+kubectl get secret -nkube-system $(kubectl get secret -n kube-system|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
+```
+
+2.0 版本用下面命令获取token:
+```
+kubectl get secret -nkubernetes-dashboard $(kubectl get secret -n kubernetes-dashboard|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
+```
+
 # dashboard.tar如何构造
 dashboard.tar里包含yaml文件与镜像文件等
 
@@ -28,16 +40,4 @@ config  image.tar  manifests
 
 ```
 [root@iZj6c2ihvsz4y7barissm4Z test]#  tar cvf dashboard.tar config image.tar manifests
-```
-
-# 获取登录token
-
-高版本dashboard为了安全已经把SKIP按钮废弃了，所以需要自己拿token登录
-```
-kubectl get secret -nkube-system $(kubectl get secret -n kube-system|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
-```
-
-2.0 版本用下面命令获取token:
-```
-kubectl get secret -nkubernetes-dashboard $(kubectl get secret -n kubernetes-dashboard|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
 ```
