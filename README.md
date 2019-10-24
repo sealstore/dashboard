@@ -36,3 +36,8 @@ config  image.tar  manifests
 ```
 kubectl get secret -nkube-system $(kubectl get secret -n kube-system|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
 ```
+
+2.0 版本用下面命令获取token:
+```
+kubectl get secret -nkubernetes-dashboard $(kubectl get secret -n kubernetes-dashboard|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
+```
