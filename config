@@ -1,4 +1,4 @@
-LOAD {{.Load}} && kubectl get secret -nkubernetes-dashboard $(kubectl get secret -n kubernetes-dashboard|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
-APPLY {{.Shell}}
+LOAD {{.Load}}
+APPLY {{.Shell}} && kubectl get secret -nkubernetes-dashboard $(kubectl get secret -n kubernetes-dashboard|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
 DELETE {{.Delete}}
 REMOVE {{.Remove}}
