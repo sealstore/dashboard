@@ -1,4 +1,0 @@
-[
-  "kubernetesui/dashboard:v2.0.0-beta5",
-  "kubernetesui/metrics-scraper:v1.0.1"
-]
