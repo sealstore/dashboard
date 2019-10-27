@@ -1,4 +1,4 @@
-LOAD {{.Load}} && kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep kuboard-user | awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
-APPLY {{.Shell}}
+LOAD {{.Load}}
+APPLY {{.Shell}} && kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep kuboard-user | awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
 DELETE {{.Delete}}
 REMOVE {{.Remove}}
