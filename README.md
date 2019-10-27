@@ -1,6 +1,7 @@
 # dashboard
 
 - [官方dashboard](https://github.com/sealstore/dashboard/tree/dashboard)
+- [kuboard](https://github.com/sealstore/dashboard/tree/kuboard)
 
 
 ## 使用方法
