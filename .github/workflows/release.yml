@@ -19,6 +19,6 @@ jobs:
     - name: Create Release
       uses: JasonEtco/upload-to-release@master
       with:
-        args: dashboard.tar application/x-compressed-tar
+        args: kuboard.tar application/x-compressed-tar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

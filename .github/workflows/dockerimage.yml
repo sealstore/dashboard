@@ -14,9 +14,9 @@ jobs:
         export GO111MODULE=on && export GOPROXY=https://goproxy.io && export GOOS=linux && export GOARCH=amd64 && go build -o ../sealbuild -v && chmod a+x ../sealbuild
         cd ../ && ./sealbuild -f config.ini -t config
         ls -l
-        cat /tmp/dashboard/config
+        cat /tmp/kuboard/config
 
     - uses: actions/upload-artifact@master
       with:
-        name: dashboard
-        path: /tmp/dashboard/
+        name: kuboard
+        path: /tmp/kuboard/
