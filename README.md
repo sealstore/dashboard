@@ -17,10 +17,10 @@ http://你的master地址:32567
 
 管理员用户
 ```
-kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep kuboard-user | awk '{print $1}')  -o jsonpath='{.data.token}'  | base64 --decode
+kubectl -n kube-system get secret $(kubectl -n kube-system get secret | grep kuboard-user | awk '{print $1}')  -o jsonpath='{.data.token}'  | base64 --decode
 ```
 
 只读用户:
 ```
-kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep kuboard-viewer | awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
+kubectl -n kube-system get secret $(kubectl -n kube-system get secret | grep kuboard-viewer | awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
 ```
