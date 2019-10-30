@@ -3,12 +3,12 @@
 
 本地拉取(先到[release页面](https://github.com/sealstore/dashboard/releases)下载好tar包到本地)：
 ```
-wget https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata.5/dashboard.tar
+wget https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata5/dashboard.tar
 sealos install --pkg-url dashboard.tar
 ```
 或者远程拉取：
 ```
-sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata.5/dashboard.tar
+sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata5/dashboard.tar
 ```
 # 访问
 https://你的master地址:32000
@@ -18,6 +18,8 @@ https://你的master地址:32000
 # 获取登录token
 
 高版本dashboard为了安全已经把SKIP按钮废弃了，所以需要自己拿token登录
+
+dashboard1.0用：
 ```
 kubectl get secret -nkube-system $(kubectl get secret -n kube-system|grep dashboard-token |awk '{print $1}') -o jsonpath='{.data.token}'  | base64 --decode
 ```
