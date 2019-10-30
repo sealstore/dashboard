@@ -1,7 +1,7 @@
 # dashboard
 
-- [官方dashboard](https://github.com/sealstore/dashboard/tree/dashboard)    [项目主页](https://github.com/kubernetes/dashboard)
-- [kuboard](https://github.com/sealstore/dashboard/tree/kuboard)        [官网链接](https://kuboard.cn?from=sealyun)
+- [官方dashboard](https://github.com/sealstore/dashboard/tree/dashboard)       [项目主页](https://github.com/kubernetes/dashboard)
+- [kuboard](https://github.com/sealstore/dashboard/tree/kuboard)           [官网链接](https://kuboard.cn?from=sealyun)
 
 
 ## 使用方法
