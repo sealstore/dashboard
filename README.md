@@ -9,12 +9,12 @@
 
 本地拉取(先到[release页面](https://github.com/sealstore/dashboard/releases)下载好tar包到本地)：
 ```
-wget https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata.5/dashboard.tar
+wget https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata5/dashboard.tar
 sealos install --pkg-url dashboard.tar
 ```
 或者远程拉取：
 ```
-sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata.5/dashboard.tar
+sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v2.0.0-bata5/dashboard.tar
 ```
 
 # 为什么要用此包
