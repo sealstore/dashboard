@@ -3,12 +3,12 @@
 
 本地拉取(先到[release页面](https://github.com/sealstore/dashboard/releases)下载好tar包到本地)：
 ```
-wget https://github.com/sealstore/dashboard/releases/download/v1.0/kuboard.tar
+wget https://github.com/sealstore/dashboard/releases/download/v1.0-1/kuboard.tar
 sealos install --pkg-url kuboard.tar
 ```
 或者远程拉取：
 ```
-sealos install --pkg-url  https://github.com/sealstore/dashboard/releases/download/v1.0/kuboard.tar
+sealos install --pkg-url https://github.com/sealstore/dashboard/releases/download/v1.0-1/kuboard.tar 
 ```
 # 访问
 http://你的master地址:32567
