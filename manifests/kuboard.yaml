@@ -26,6 +26,7 @@ spec:
       containers:
       - name: kuboard
         image: eipwork/kuboard:latest
+        imagePullPolicy: IfNotPresent
       tolerations:
       - key: node-role.kubernetes.io/master
         effect: NoSchedule
